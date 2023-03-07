@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Home Page</title>
+</head>
+<body>
+  <center>
+  <p><b>Enter a number:</b></p>
+<input type="text" id="numInput">
+<button onclick="checkNumber()">Check</button>
+<p id="result"></p>
+
+<script>
+function evenOrOdd(num) {
+  if(num % 2 === 0) {
+    return "<font color=blue>Even Number</font>";
+  } else {
+    return "<font color=green>Odd Number</font>";
+  }
+}
+
+function checkNumber() {
+  var num = document.getElementById("numInput").value;
+  var result = document.getElementById("result");
+  if(isNaN(num)) {
+    result.innerHTML = "Please enter a valid number.";
+  } else {
+    result.innerHTML = num + " is " + evenOrOdd(num) + ".";
+  }
+}
+</script>
+
+  </center>
+</body>
+</html>
